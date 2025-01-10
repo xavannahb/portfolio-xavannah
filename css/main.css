@@ -1,0 +1,270 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf');
+    font-weight: 600;
+}
+
+:root {
+    /* HET KLEURENPALET */
+    --color-text:#343029;
+    --color-text2:#343029;
+    --color-bg:#e1dcd1;
+    --color-bg-white:#ffffff;
+    
+    --color-bg-button:#5B5448;
+    
+    --color-accent: #5B5448;
+    --color-accent2: #ffffff;
+
+    --bg-image-1: url(images/backroundimagelight1.jpg);
+    --bg-image-2: url(images/backroundimagelight2.jpg);
+    --bg-image-3: url(images/backroundimagelight3.jpg);
+    --bg-image-4: url(images/backroundimagelight4.jpg);
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+      --color-text:#ffffff;
+      --color-text2:#343029;
+      --color-bg:#5B5448;
+      
+      --color-bg-button:#D4C9B5;
+      
+      --color-accent: #D4C9B5;
+      --color-accent2: #D4C9B5;
+
+    --bg-image-1: url(images/backroundimagedark1.jpg);
+    --bg-image-2: url(images/backroundimagedark2.jpg);
+    --bg-image-3: url(images/backroundimagedark3.jpg);
+    --bg-image-4: url(images/backroundimagedark4.jpg);
+    }
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+}
+/* Body */ 
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+h1 {
+    margin: 0;
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+
+h2 {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+p { 
+    line-height: 1.3em;
+}
+
+/* Header */
+
+header {
+    position: sticky;
+}
+
+header ul:nth-of-type(1) {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-bg);
+    z-index: 1;
+    translate: -100%;
+    transition: 0.5s;
+}
+
+header nav.open {
+    translate: 0;
+}
+ 
+header img {
+    width: 25px;
+    height: 25px;
+
+}
+
+header button {
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-bg);
+    border: none;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav li {
+    list-style: none;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+.navbar {
+    border-top: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+}
+
+header nav ul:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+}
+
+a { 
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color:  var(--color-accent);
+}
+
+.nav-link-selected {
+    color:  var(--color-accent);
+}
+
+
+/* main */
+
+
+
+/* Footer */
+
+footer {
+    padding: 1em;
+    border-top: 1px solid var(--color-text);
+}
+
+footer article li{
+    list-style: none;
+}
+
+footer article ul{
+    padding: 0;
+    margin: 0;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 1.7em;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+}
+
+footer article:nth-of-type(2) {
+    display: none;
+}
+
+footer article:nth-of-type(3) {
+    display: none;
+}
+
+@media (width > 800px) {
+    header {
+        padding-right: 3em;
+        padding-left: 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav {
+        position: relative;
+        background-color: none;
+        translate: 0;
+        transition: 0.5s;
+    }
+
+    header nav ul:nth-of-type(1) {
+        flex-direction: unset;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header button {
+        display: none;
+    }
+
+    main {
+        margin-right: 4em;
+        margin-left: 4em;
+    }
+
+    footer {
+        padding-right: 3em;
+        padding-left: 3em;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        margin-top: 2em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        border-top: 1px solid var(--color-text);
+    }
+    
+    footer h3 {
+        margin: 0;
+        font-size: 1.3em;
+        padding-bottom: 0.5em;
+    }
+
+    footer article:nth-of-type(2) {
+        display: unset;
+    }
+    
+    footer article:nth-of-type(3) {
+        display: unset;
+    }
+}
+
+@media (width > 1000px) {
+    header {
+        padding-right: 6em;
+        padding-left: 6em;
+    }
+
+    main {
+        margin-right: 8em;
+        margin-left: 8em;
+    }
+    footer {
+        padding-right: 8em;
+        padding-left: 8em;
+    }
+}
