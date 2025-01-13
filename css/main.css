@@ -17,11 +17,6 @@
     
     --color-accent: #5B5448;
     --color-accent2: #ffffff;
-
-    --bg-image-1: url(images/backroundimagelight1.jpg);
-    --bg-image-2: url(images/backroundimagelight2.jpg);
-    --bg-image-3: url(images/backroundimagelight3.jpg);
-    --bg-image-4: url(images/backroundimagelight4.jpg);
 }
 
 @media (prefers-color-scheme:dark) {
@@ -34,11 +29,6 @@
       
       --color-accent: #D4C9B5;
       --color-accent2: #D4C9B5;
-
-    --bg-image-1: url(images/backroundimagedark1.jpg);
-    --bg-image-2: url(images/backroundimagedark2.jpg);
-    --bg-image-3: url(images/backroundimagedark3.jpg);
-    --bg-image-4: url(images/backroundimagedark4.jpg);
     }
   }
 
